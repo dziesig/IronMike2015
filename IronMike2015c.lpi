@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="IronMike2015c"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="6">
+      <Item1>
+        <PackageName Value="MagicLibrary2015"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="SQLDBLaz"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="Printer4Lazarus"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="MagicControls"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="LCL"/>
+      </Item6>
+    </RequiredPackages>
+    <Units Count="42">
+      <Unit0>
+        <Filename Value="IronMike2015c.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="mainformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MainFormUnit"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="aboutironmike.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <UnitName Value="aboutironmike"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="preferences.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PreferencesForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="preferences"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="fastclockwizardform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FastClockWizard"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="fastclockwizardform"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="railroadformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="RailroadForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="RailroadFormUnit"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="splashformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SplashForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SplashFormUnit"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="dispatcherformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DispatcherForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="DispatcherFormUnit"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="watsonvilleformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="WatsonvilleForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="WatsonvilleFormUnit"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="systemmapformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SystemMapForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="systemmapformUnit"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="salinasshedformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SalinasShedForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SalinasShedFormUnit"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="ordersformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="OrdersForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="OrdersFormUnit"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="ironmikedataunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="IronMikeData"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="IronMikeDataUnit"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="stationsformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="StationsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="StationsFormUnit"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="trainsformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TrainsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="TrainsFormUnit"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="railroad.fsm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="stations.fsm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="station_tracks.fsm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="Trains.fsm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="timetableformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TimetableForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="TimetableFormUnit"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="opsessionformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="OpSessionForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="OpSessionFormUnit"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="railroadannouncements.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="RailroadAnnouncements"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="registertrainformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="RegisterTrainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="RegisterTrainFormUnit"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="ordersunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="OrdersUnit"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="displayunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DisplayUnit"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="rrsubsunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="RRSubsUnit"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="constantsunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ConstantsUnit"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="scheduleunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ScheduleUnit"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="trainsunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TrainsUnit"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="selectwhereformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SelectWhereForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SelectWhereFormUnit"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="delaytrainformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DelayTrainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="DelayTrainFormUnit"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="secondsectionformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SecondSectionForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SecondSectionFormUnit"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="addtrainformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AddTrainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="AddTrainFormUnit"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="traininfoformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TrainInfoForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="TrainInfoFormUnit"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="deltatimeformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DeltaTimeForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="DeltaTimeFormUnit"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="stationsunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="StationsUnit"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="showtimetableformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ShowTimetableForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ShowTimetableFormUnit"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="timetabledisplayformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TimetableDisplayForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="TimetableDisplayFormUnit"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="Salinas.fsm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="syncclockformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SyncClockForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SyncClockFormUnit"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="meetvisualizationformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MeetVisualizationForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MeetVisualizationFormUnit"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="envelopeunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EnvelopeUnit"/>
+      </Unit41>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="IronMike2015c"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <Checks>
+        <RangeChecks Value="True"/>
+        <OverflowChecks Value="True"/>
+        <StackChecks Value="True"/>
+      </Checks>
+    </CodeGeneration>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="5">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="RunError(5)"/>
+      </Item4>
+      <Item5>
+        <Name Value="EInOutError"/>
+      </Item5>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

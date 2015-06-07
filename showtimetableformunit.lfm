@@ -1,0 +1,118 @@
+object ShowTimetableForm: TShowTimetableForm
+  Left = 7
+  Height = 607
+  Top = 32
+  Width = 1327
+  Caption = 'ShowTimetableForm'
+  ClientHeight = 607
+  ClientWidth = 1327
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnResize = FormResize
+  Position = poScreenCenter
+  LCLVersion = '1.4.0.4'
+  object Panel1: TPanel
+    Left = 0
+    Height = 530
+    Top = 0
+    Width = 1327
+    Align = alTop
+    BevelOuter = bvNone
+    Caption = 'Panel1'
+    ClientHeight = 530
+    ClientWidth = 1327
+    TabOrder = 0
+    object DBText1: TDBText
+      Left = 8
+      Height = 40
+      Top = 40
+      Width = 1327
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      AutoSize = False
+      DataField = 'rrname'
+      DataSource = DataSource1
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -37
+      Font.Name = 'Times New Roman'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label1: TLabel
+      Left = 8
+      Height = 45
+      Top = 103
+      Width = 1310
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'Master Timetable'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -32
+      Font.Name = 'Times New Roman'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object LogoDBImage: TDBImage
+      Left = 8
+      Height = 142
+      Top = 40
+      Width = 162
+      Center = True
+      DataField = 'logo'
+      DataSource = DataSource1
+    end
+    object TTGrid: TStringGrid
+      Left = 9
+      Height = 320
+      Top = 208
+      Width = 1327
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      DefaultDrawing = False
+      DefaultRowHeight = 40
+      FixedCols = 0
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 0
+      TitleFont.CharSet = ANSI_CHARSET
+      TitleFont.Height = -15
+      TitleFont.Name = 'Arial'
+      TitleFont.Pitch = fpVariable
+      TitleFont.Quality = fqDraft
+      OnDrawCell = TTGridDrawCell
+    end
+  end
+  object BitBtn1: TBitBtn
+    Left = 1080
+    Height = 30
+    Top = 552
+    Width = 75
+    Caption = 'Print'
+    OnClick = BitBtn1Click
+    TabOrder = 1
+  end
+  object BitBtn2: TBitBtn
+    Left = 1216
+    Height = 30
+    Top = 552
+    Width = 75
+    Caption = 'Done'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = BitBtn2Click
+    TabOrder = 2
+  end
+  object DataSource1: TDataSource
+    DataSet = IronMikeData.RailroadQuery
+    left = 224
+    top = 160
+  end
+end

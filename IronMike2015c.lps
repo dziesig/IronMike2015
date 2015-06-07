@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="75">
+      <Unit0>
+        <Filename Value="IronMike2015c.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="211"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="mainformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MainFormUnit"/>
+        <TopLine Value="4"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="211"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="aboutbase.pas"/>
+        <HasResources Value="True"/>
+        <UnitName Value="AboutBase"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="37"/>
+        <CursorPos Y="55"/>
+        <UsageCount Value="211"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="aboutironmike.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <UnitName Value="aboutironmike"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="211"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="preferences.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PreferencesForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="preferences"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="211"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="fastclockwizardform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FastClockWizard"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="fastclockwizardform"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="211"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\IronMike2015b\aboutironmike.lfm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="211"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="railroadformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="RailroadForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="RailroadFormUnit"/>
+        <EditorIndex Value="1"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="splashformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SplashForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SplashFormUnit"/>
+        <EditorIndex Value="10"/>
+        <CursorPos Y="19"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="dispatcherformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DispatcherForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="DispatcherFormUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="203"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="watsonvilleformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="WatsonvilleForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="WatsonvilleFormUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="203"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="systemmapformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SystemMapForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="systemmapformUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="46"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="201"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="salinasshedformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SalinasShedForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SalinasShedFormUnit"/>
+        <EditorIndex Value="5"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="ordersformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="OrdersForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="OrdersFormUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="200"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="ironmikedataunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="IronMikeData"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="IronMikeDataUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="8"/>
+        <CursorPos X="30" Y="336"/>
+        <ExtraEditorCount Value="1"/>
+        <ExtraEditor1>
+          <EditorIndex Value="-1"/>
+          <TopLine Value="2"/>
+          <CursorPos Y="20"/>
+        </ExtraEditor1>
+        <UsageCount Value="200"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="stationsformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="StationsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="StationsFormUnit"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="trainsformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TrainsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="TrainsFormUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="200"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="railroad.fsm"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="16"/>
+        <UsageCount Value="201"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="stations.fsm"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="14"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="station_tracks.fsm"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="14"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="Trains.fsm"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="14"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="timetableformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TimetableForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="TimetableFormUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="200"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="opsessionformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="OpSessionForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="OpSessionFormUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="202"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="railroadannouncements.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="RailroadAnnouncements"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="203"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="registertrainformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="RegisterTrainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="RegisterTrainFormUnit"/>
+        <EditorIndex Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="ordersunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="OrdersUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="200"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="displayunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DisplayUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="200"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="rrsubsunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="RRSubsUnit"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="constantsunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ConstantsUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="200"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="scheduleunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ScheduleUnit"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="207"/>
+        <Loaded Value="True"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="trainsunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TrainsUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="316"/>
+        <CursorPos X="21" Y="330"/>
+        <ExtraEditorCount Value="1"/>
+        <ExtraEditor1>
+          <EditorIndex Value="-1"/>
+          <TopLine Value="13"/>
+          <CursorPos Y="20"/>
+        </ExtraEditor1>
+        <UsageCount Value="200"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="selectwhereformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SelectWhereForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SelectWhereFormUnit"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="delaytrainformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DelayTrainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="DelayTrainFormUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="86"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="200"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="secondsectionformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SecondSectionForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SecondSectionFormUnit"/>
+        <EditorIndex Value="7"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="addtrainformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AddTrainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="AddTrainFormUnit"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="201"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="traininfoformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TrainInfoForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="TrainInfoFormUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="212"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="deltatimeformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DeltaTimeForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="DeltaTimeFormUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="200"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="stationsunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="StationsUnit"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="12"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="showtimetableformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ShowTimetableForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ShowTimetableFormUnit"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="158"/>
+        <Loaded Value="True"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="timetabledisplayformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TimetableDisplayForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="TimetableDisplayFormUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="145"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="Salinas.fsm"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="8"/>
+        <CursorPos Y="26"/>
+        <UsageCount Value="108"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="syncclockformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SyncClockForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SyncClockFormUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="56"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="91"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="meetvisualizationformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MeetVisualizationForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MeetVisualizationFormUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="64"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="envelopeunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EnvelopeUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="32"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="meetplanningformunitorig.pas"/>
+        <ComponentName Value="MeetPlanningForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="14" Y="55"/>
+        <UsageCount Value="196"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="voiceunit.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="54"/>
+        <CursorPos Y="67"/>
+        <UsageCount Value="182"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="Main.fsm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="32"/>
+        <CursorPos Y="104"/>
+        <UsageCount Value="56"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="C:\lazarus\lcl\grids.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2363"/>
+        <CursorPos Y="2372"/>
+        <UsageCount Value="2"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="..\MagicLibrary\commonmath.pas"/>
+        <UnitName Value="CommonMath"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="13"/>
+        <UsageCount Value="16"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="..\MagicLibrary\formpanel.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="10"/>
+        <CursorPos Y="23"/>
+        <UsageCount Value="9"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="C:\lazarus\lcl\include\customimage.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="48"/>
+        <CursorPos Y="60"/>
+        <UsageCount Value="9"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="..\MagicLibrary\commondebug.pas"/>
+        <UnitName Value="CommonDebug"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="10"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="C:\lazarus\lcl\customtimer.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="166"/>
+        <CursorPos Y="175"/>
+        <UsageCount Value="6"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="..\MagicLibrary\magictimeedit.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="316"/>
+        <UsageCount Value="6"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="meetplanningformunit.pas"/>
+        <ComponentName Value="MeetPlanningForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="232"/>
+        <CursorPos Y="249"/>
+        <UsageCount Value="34"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2838"/>
+        <CursorPos Y="2852"/>
+        <UsageCount Value="6"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="..\MagicLibrary\aboutbase.pas"/>
+        <UnitName Value="AboutBase"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="10"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="..\MagicLibrary\commoncs.pas"/>
+        <UnitName Value="CommonCS"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="10"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="..\MagicLibrary\magicmainformbase1.lfm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="..\MagicLibrary\magicframeform.pas"/>
+        <UnitName Value="MagicFrameForm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="19"/>
+        <CursorPos Y="27"/>
+        <UsageCount Value="10"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="..\MagicLibrary\voiceform.pas"/>
+        <UnitName Value="VoiceForm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="109"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="10"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="..\MagicLibrary\commonapp.pas"/>
+        <UnitName Value="CommonApp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="10"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="..\MagicLibrary\magicmainformbase1.pas"/>
+        <UnitName Value="magicmainformbase1"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="10"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="..\MagicLibrary\objectfactory1.pas"/>
+        <UnitName Value="ObjectFactory1"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="..\MagicLibrary\commonio.pas"/>
+        <UnitName Value="CommonIO"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="10"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="..\MagicLibrary\commonini.pas"/>
+        <UnitName Value="CommonIni"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="8"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="10"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="..\MagicLibrary\magicformframe1.pas"/>
+        <UnitName Value="MagicFormFrame1"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="22"/>
+        <CursorPos Y="34"/>
+        <UsageCount Value="10"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="..\MagicLibrary\stringsubs.pas"/>
+        <UnitName Value="StringSubs"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="..\MagicLibrary\persists2.pas"/>
+        <UnitName Value="Persists2"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="..\MagicLibrary\textio2.pas"/>
+        <UnitName Value="textio2"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="..\MagicLibrary\commonstacks.pas"/>
+        <UnitName Value="CommonStacks"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="10"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="..\MagicLibrary\commonmesssages.pas"/>
+        <UnitName Value="CommonMesssages"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="10"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="..\MagicLibrary\commonmisc.pas"/>
+        <UnitName Value="CommonMisc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="10"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="..\MagicLibrary\commonlog.pas"/>
+        <UnitName Value="CommonLog"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="10"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="..\MagicLibrary\voiceunit.pas"/>
+        <UnitName Value="VoiceUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="10"/>
+      </Unit74>
+    </Units>
+    <JumpHistory HistoryIndex="-1"/>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="2">
+      <Item1>
+        <Expression Value="aTrain.fnumber"/>
+      </Item1>
+      <Item2>
+        <Expression Value="atrain.fstatus"/>
+      </Item2>
+    </Watches>
+  </Debugging>
+</CONFIG>

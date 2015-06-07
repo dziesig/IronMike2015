@@ -1,0 +1,840 @@
+object IronMikeData: TIronMikeData
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  OldCreateOrder = False
+  Height = 486
+  HorizontalOffset = 463
+  VerticalOffset = 206
+  Width = 798
+  object RailroadQuery: TSQLQuery
+    FieldDefs = <>
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'SELECT * FROM railroad;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE railroad'
+      'SET rrname=:RRName,President=:President, Dispatcher=:Dispatcher, SuperiorDirection=:SuperiorDirection, StandardDirections=:StandardDirections, ClockStyle=:ClockStyle, Logo=:Logo;'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO railroad ( RRName, President, Dispatcher, SuperiorDirection, StandardDirections, ClockStyle, Logo )'
+      '  VALUES (:RRName, :President, :Dispatcher, :SuperiorDirection, :StandardDirections, :ClockStyle, :Logo );'
+    )
+    Params = <>
+    left = 32
+    top = 96
+  end
+  object Connection: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    Transaction = Transaction1
+    LogEvents = []
+    Options = []
+    left = 32
+    top = 16
+  end
+  object Transaction1: TSQLTransaction
+    Active = False
+    Database = Connection
+    left = 104
+    top = 16
+  end
+  object TrainsQuery: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'idx'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'number'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'name'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 31
+      end    
+      item
+        Name = 'direction'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'consist'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 4
+      end    
+      item
+        Name = 'superiority'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'counterpart'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'status'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'flags'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'stops_at'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'print_stops_at'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end>
+    AfterPost = AfterPost
+    Database = Connection
+    Transaction = Transaction1
+    SQL.Strings = (
+      'SELECT idx, number, name, direction, consist, superiority,'
+      '       counterpart, status, flags, stops_at, print_stops_at'
+      '  FROM trains ORDER BY number;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE TRAINS SET  number = :number, name = :name, direction=:direction,'
+      '                   consist=:consist, superiority=:superiority,'
+      '                   counterpart=:counterpart, status=:status,'
+      '                   flags=:flags, stops_at=:stops_at,'
+      '                   print_stops_at=:print_stops_at'
+      '                    WHERE idx=:idx;'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO trains ( idx, number, name, direction, consist,'
+      '                     superiority, counterpart, status, flags,'
+      '                     stops_at, print_stops_at )'
+      '             VALUES( NULL,:number,:name,:direction, :consist,'
+      '                     :superiority, :counterpart, :status, :flags,'
+      '                     :stops_at, :print_stops_at);'
+    )
+    Params = <>
+    left = 104
+    top = 96
+  end
+  object TrainsQuery1: TSQLQuery
+    FieldDefs = <>
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'SELECT idx, number, name, direction, consist, superiority,'
+      '       counterpart, status, flags, stops_at, print_stops_at'
+      '  FROM trains WHERE idx=:idx;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE TRAINS SET  number = :number, name = :name, direction=:direction,'
+      '                   consist=:consist, superiority=:superiority,'
+      '                   counterpart=:counterpart, status=:status,'
+      '                   flags=:flags, stops_at=:stops_at,'
+      '                   print_stops_at=:print_stops_at'
+      '                    WHERE idx=:idx;'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO trains ( idx, number, name, direction, consist,'
+      '                     superiority, counterpart, status, flags,'
+      '                     stops_at, print_stops_at )'
+      '             VALUES( NULL,:number,:name,:direction, :consist,'
+      '                     :superiority, :counterpart, :status, :flags,'
+      '                     :stops_at, :print_stops_at);'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'idx'
+        ParamType = ptInput
+      end>
+    left = 104
+    top = 160
+  end
+  object StationsQuery: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'stn_idx'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'pos'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'Name'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 31
+      end    
+      item
+        Name = 'Code'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 4
+      end>
+    AfterDelete = StationsQueryAfterDelete
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'SELECT stn_idx, pos, name, Code FROM stations ORDER BY pos;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE stations SET  pos = :pos, name = :name, code=:code WHERE stn_idx=:stn_idx;'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO stations (stn_idx, pos, name, code) VALUES( NULL,:pos,:name,:code);'
+    )
+    DeleteSQL.Strings = (
+      'DELETE FROM stations WHERE stn_idx=:stn_idx;'
+    )
+    Params = <>
+    ParseSQL = False
+    UpdateMode = upWhereChanged
+    left = 192
+    top = 96
+  end
+  object TracksQuery: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'idx'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'Name'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 31
+      end    
+      item
+        Name = 'Code'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 4
+      end    
+      item
+        Name = 'station_idx'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end>
+    AfterDelete = AfterPost
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'SELECT stn_trk_idx, name, code, station_idx FROM station_tracks WHERE station_idx=:station_idx;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE station_tracks SET  name = :name, code=:code WHERE stn_trk_idx=:stn_trk_idx;'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO station_tracks ( stn_trk_idx, name, code, station_idx)'
+      '                     VALUES( :stn_trk_idx,:name,upper(:code),:station_idx);'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'station_idx'
+        ParamType = ptInput
+      end>
+    left = 288
+    top = 96
+  end
+  object StationsQueryDup: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'idx'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'Name'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 31
+      end    
+      item
+        Name = 'Code'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 4
+      end    
+      item
+        Name = 'station_idx'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end>
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'SELECT count(*), stn_idx, name, code FROM stations'
+      '  WHERE stn_idx <> :station_idx and (name=:name or code=:code);'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE StationTracks SET  name = :name, code=:code WHERE stn_trk_idx=:stn_trk_idx;'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO StationTracks (stn_trk_idx, name, code, station_idx) VALUES( :stn_trk_idx,:name,upper(:code),:station_idx);'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'station_idx'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'name'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'code'
+        ParamType = ptInput
+      end>
+    left = 192
+    top = 352
+  end
+  object TracksQueryDup: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'idx'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'Name'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 31
+      end    
+      item
+        Name = 'Code'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 4
+      end    
+      item
+        Name = 'station_idx'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end>
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'SELECT count(*), stn_trk_idx, name, code, station_idx FROM station_tracks'
+      '  WHERE station_idx=:station_idx and (name=:name or code=:code) and stn_trk_idx <> :stn_trk_idx;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE station_tracks SET  name = :name, code=:code WHERE stn_trk_idx=:stn_trk_idx;'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO station_tracks (stn_trk_idx, name, code, station_idx) VALUES( :stn_trk_idx,:name,upper(:code),:station_idx);'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'station_idx'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'name'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'code'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'stn_trk_idx'
+        ParamType = ptInput
+      end>
+    left = 288
+    top = 224
+  end
+  object TimetableQuery: TSQLQuery
+    FieldDefs = <>
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'select * from stops;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE stops SET arrives=:arrives, departs=:departs, trn_idx=:trn_idx,'
+      '                 stn_idx=:stn_idx, trk_idx=:trk_idx'
+      '             WHERE  idx=:idx;'
+      ''
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO stops ( idx, arrives, departs, trn_idx, stn_idx, trk_idx )'
+      'VALUES            ( NULL, :arrives, :departs, :trn_idx, :stn_idx, :trk_idx );'
+      ''
+    )
+    DeleteSQL.Strings = (
+      'DELETE FROM stops WHERE idx=:idx;'
+    )
+    Params = <>
+    left = 384
+    top = 96
+  end
+  object TimetableQuery1: TSQLQuery
+    FieldDefs = <>
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'select idx, arrives, departs, stn_idx, trn_idx, trk_idx, has_meet from stops WHERE stn_idx=:stn_idx and trn_idx=:trn_idx;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE stops SET arrives=:arrives, departs=:departs, trn_idx=:trn_idx,'
+      '                 stn_idx=:stn_idx, trk_idx=:trk_idx'
+      '             WHERE  idx=:idx;'
+      ''
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO stops ( idx, arrives, departs, trn_idx, stn_idx, trk_idx )'
+      'VALUES            ( NULL, :arrives, :departs, :trn_idx, :stn_idx, :trk_idx );'
+      ''
+    )
+    DeleteSQL.Strings = (
+      'DELETE FROM stops WHERE idx=:idx;'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'stn_idx'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'trn_idx'
+        ParamType = ptInput
+      end>
+    left = 384
+    top = 160
+  end
+  object TimetableQuery2: TSQLQuery
+    FieldDefs = <>
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'select idx, arrives, departs, stn_idx, trn_idx, trk_idx from stops WHERE idx=:idx;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE stops SET arrives=:arrives, departs=:departs, trn_idx=:trn_idx,'
+      '                 stn_idx=:stn_idx, trk_idx=:trk_idx'
+      '             WHERE  idx=:idx;'
+      ''
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO stops ( idx, arrives, departs, trn_idx, stn_idx, trk_idx )'
+      'VALUES            ( NULL, :arrives, :departs, :trn_idx, :stn_idx, :trk_idx );'
+      ''
+    )
+    DeleteSQL.Strings = (
+      'DELETE FROM stops WHERE idx=:idx;'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'idx'
+        ParamType = ptInput
+      end>
+    left = 384
+    top = 224
+  end
+  object StationsQuery1: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'stn_idx'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'pos'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'Name'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 31
+      end    
+      item
+        Name = 'Code'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 4
+      end>
+    AfterDelete = StationsQueryAfterDelete
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'SELECT stn_idx, pos, name, Code FROM stations WHERE stn_idx=:stn_idx;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE stations SET  pos = :pos, name = :name, code=:code WHERE stn_idx=:stn_idx;'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO stations (stn_idx, pos, name, code) VALUES( NULL,:pos,:name,:code);'
+    )
+    DeleteSQL.Strings = (
+      'DELETE FROM stations WHERE stn_idx=:stn_idx;'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'stn_idx'
+        ParamType = ptInput
+      end>
+    ParseSQL = False
+    UpdateMode = upWhereChanged
+    left = 192
+    top = 160
+  end
+  object StationsCountQuery: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'stn_idx'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'pos'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'Name'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 31
+      end    
+      item
+        Name = 'Code'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 4
+      end>
+    AfterDelete = StationsQueryAfterDelete
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'SELECT count(*) FROM stations;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE stations SET  pos = :pos, name = :name, code=:code WHERE stn_idx=:stn_idx;'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO stations (stn_idx, pos, name, code) VALUES( NULL,:pos,:name,:code);'
+    )
+    DeleteSQL.Strings = (
+      'DELETE FROM stations WHERE stn_idx=:stn_idx;'
+    )
+    Params = <>
+    ParseSQL = False
+    UpdateMode = upWhereChanged
+    left = 192
+    top = 424
+  end
+  object TrainsCountQuery: TSQLQuery
+    FieldDefs = <>
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'SELECT count(*) FROM trains;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE TRAINS SET  number = :number, name = :name, direction=:direction,'
+      '                   consist=:consist, superiority=:superiority,'
+      '                   counterpart=:counterpart, status=:status,'
+      '                   flags=:flags, stops_at=:stops_at,'
+      '                   print_stops_at=:print_stops_at'
+      '                    WHERE idx=:idx;'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO trains ( idx, number, name, direction, consist,'
+      '                     superiority, counterpart, status, flags,'
+      '                     stops_at, print_stops_at )'
+      '             VALUES( NULL,:number,:name,:direction, :consist,'
+      '                     :superiority, :counterpart, :status, :flags,'
+      '                     :stops_at, :print_stops_at);'
+    )
+    Params = <>
+    left = 104
+    top = 296
+  end
+  object OpSessionQuery: TSQLQuery
+    FieldDefs = <>
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'SELECT * FROM opsessions;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE opsessions'
+      'SET use_year=:use_year, todays_date=:todays_date, start_date=:start_date, start_time=:start_time, fast_clock=:fast_clock, CrewCallLead=:CrewCallLead;'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO opsessions ( use_year, todays_date, start_date, start_time, fast_clock, CrewCallLead )'
+      '  VALUES (:use_year, :todays_date, :start_date, :start_time, :fast_clock, :CrewCallLead );'
+    )
+    Params = <>
+    left = 472
+    top = 96
+  end
+  object TimetableQuery3: TSQLQuery
+    FieldDefs = <>
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'select idx, arrives, departs, stn_idx, trn_idx, trk_idx from stops WHERE trn_idx=:trn_idx ORDER BY departs;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE stops SET arrives=:arrives, departs=:departs, trn_idx=:trn_idx,'
+      '                 stn_idx=:stn_idx, trk_idx=:trk_idx'
+      '             WHERE  idx=:idx;'
+      ''
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO stops ( idx, arrives, departs, trn_idx, stn_idx, trk_idx )'
+      'VALUES            ( NULL, :arrives, :departs, :trn_idx, :stn_idx, :trk_idx );'
+      ''
+    )
+    DeleteSQL.Strings = (
+      'DELETE FROM stops WHERE idx=:idx;'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'trn_idx'
+        ParamType = ptInput
+      end>
+    left = 384
+    top = 296
+  end
+  object TrainsQuery2: TSQLQuery
+    FieldDefs = <>
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'SELECT idx, number, name, direction, consist, superiority,'
+      '       counterpart, status, flags, stops_at, print_stops_at'
+      '  FROM trains WHERE number=:number;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE TRAINS SET  number = :number, name = :name, direction=:direction,'
+      '                   consist=:consist, superiority=:superiority,'
+      '                   counterpart=:counterpart, status=:status,'
+      '                   flags=:flags, stops_at=:stops_at,'
+      '                   print_stops_at=:print_stops_at'
+      '                    WHERE idx=:idx;'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO trains ( idx, number, name, direction, consist,'
+      '                     superiority, counterpart, status, flags,'
+      '                     stops_at, print_stops_at )'
+      '             VALUES( NULL,:number,:name,:direction, :consist,'
+      '                     :superiority, :counterpart, :status, :flags,'
+      '                     :stops_at, :print_stops_at);'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'number'
+        ParamType = ptInput
+      end>
+    left = 104
+    top = 224
+  end
+  object TracksQuery1: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'idx'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'Name'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 31
+      end    
+      item
+        Name = 'Code'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 4
+      end    
+      item
+        Name = 'station_idx'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end>
+    AfterDelete = AfterPost
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'SELECT stn_trk_idx, name, code, station_idx FROM station_tracks WHERE stn_trk_idx=:stn_trk_idx;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE station_tracks SET  name = :name, code=:code WHERE stn_trk_idx=:stn_trk_idx;'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO station_tracks ( stn_trk_idx, name, code, station_idx)'
+      '                     VALUES( :stn_trk_idx,:name,upper(:code),:station_idx);'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'stn_trk_idx'
+        ParamType = ptInput
+      end>
+    left = 288
+    top = 160
+  end
+  object TimetableQuery4: TSQLQuery
+    FieldDefs = <>
+    AfterPost = AfterPost
+    SQL.Strings = (
+      ''
+    )
+    UpdateSQL.Strings = (
+      ''
+    )
+    InsertSQL.Strings = (
+      ''
+    )
+    DeleteSQL.Strings = (
+      ''
+    )
+    Params = <>
+    left = 384
+    top = 352
+  end
+  object StationsQuery2: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'stn_idx'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'pos'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'Name'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 31
+      end    
+      item
+        Name = 'Code'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 4
+      end>
+    AfterDelete = StationsQueryAfterDelete
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'SELECT stn_idx, pos, name, Code FROM stations WHERE pos=:pos;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE stations SET  pos = :pos, name = :name, code=:code WHERE stn_idx=:stn_idx;'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO stations (stn_idx, pos, name, code) VALUES( NULL,:pos,:name,:code);'
+    )
+    DeleteSQL.Strings = (
+      'DELETE FROM stations WHERE stn_idx=:stn_idx;'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'pos'
+        ParamType = ptInput
+      end>
+    ParseSQL = False
+    UpdateMode = upWhereChanged
+    left = 192
+    top = 224
+  end
+  object StationsQuery3: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'stn_idx'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'pos'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'Name'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 31
+      end    
+      item
+        Name = 'Code'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 4
+      end>
+    AfterDelete = StationsQueryAfterDelete
+    AfterPost = AfterPost
+    SQL.Strings = (
+      'SELECT stn_idx, pos, name, Code FROM stations WHERE name=:name;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE stations SET  pos = :pos, name = :name, code=:code WHERE stn_idx=:stn_idx;'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO stations (stn_idx, pos, name, code) VALUES( NULL,:pos,:name,:code);'
+    )
+    DeleteSQL.Strings = (
+      'DELETE FROM stations WHERE stn_idx=:stn_idx;'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'name'
+        ParamType = ptInput
+      end>
+    ParseSQL = False
+    UpdateMode = upWhereChanged
+    left = 192
+    top = 296
+  end
+end

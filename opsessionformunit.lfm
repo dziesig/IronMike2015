@@ -1,0 +1,198 @@
+object OpSessionForm: TOpSessionForm
+  Left = 352
+  Height = 435
+  Top = 123
+  Width = 513
+  Caption = 'OpSessionForm'
+  ClientHeight = 435
+  ClientWidth = 513
+  LCLVersion = '1.4.0.4'
+  object GroupBox3: TGroupBox
+    Left = 24
+    Height = 304
+    Top = 112
+    Width = 264
+    Caption = 'Op Session Start Date'
+    ClientHeight = 286
+    ClientWidth = 260
+    Color = clForm
+    ParentColor = False
+    TabOrder = 0
+    object CheckBox1: TCheckBox
+      Left = 20
+      Height = 17
+      Top = 12
+      Width = 121
+      Caption = 'Use Today''s Date In:'
+      OnChange = CheckBox1Change
+      TabOrder = 0
+    end
+    object YearComboBox: TComboBox
+      Left = 168
+      Height = 21
+      Top = 8
+      Width = 64
+      ItemHeight = 13
+      OnCloseUp = YearComboBoxCloseUp
+      TabOrder = 2
+    end
+    object Calendar1: TCalendar
+      Left = 36
+      Height = 158
+      Top = 68
+      Width = 190
+      DateTime = 15735
+      OnChange = Calendar1Change
+      TabOrder = 1
+    end
+    object Label4: TLabel
+      Left = 0
+      Height = 15
+      Top = 44
+      Width = 256
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'OR'
+      ParentColor = False
+    end
+    object ComboBox1: TComboBox
+      Left = 20
+      Height = 21
+      Top = 248
+      Width = 68
+      ItemHeight = 13
+      Items.Strings = (
+        '1840'
+        '1850'
+        '1860'
+        '1870'
+        '1880'
+        '1890'
+        '1900'
+        '1910'
+        '1920'
+        '1930'
+        '1940'
+        '1950'
+        '1960'
+        '1970'
+        '1980'
+        '1990'
+        '2000'
+        '2010'
+        '2020'
+        '2030'
+        '2040'
+        '2050'
+      )
+      OnCloseUp = ComboBox1CloseUp
+      Style = csDropDownList
+      TabOrder = 3
+    end
+    object Label5: TLabel
+      Left = 20
+      Height = 13
+      Top = 236
+      Width = 36
+      Caption = 'Decade'
+      ParentColor = False
+    end
+    object Label6: TLabel
+      Left = 100
+      Height = 13
+      Top = 252
+      Width = 110
+      Caption = 'Quick move to decade.'
+      ParentColor = False
+    end
+  end
+  object GroupBox4: TGroupBox
+    Left = 304
+    Height = 304
+    Top = 112
+    Width = 184
+    Caption = 'Fast Clock Ratio (Nominal)'
+    ClientHeight = 286
+    ClientWidth = 180
+    TabOrder = 1
+    object MultiplierListBox: TListBox
+      Left = 16
+      Height = 245
+      Top = 19
+      Width = 148
+      ItemHeight = 0
+      OnClick = MultiplierListBoxClick
+      TabOrder = 0
+    end
+  end
+  object GroupBox1: TGroupBox
+    Left = 24
+    Height = 85
+    Top = 20
+    Width = 264
+    Caption = 'Op Session Start Time'
+    ClientHeight = 67
+    ClientWidth = 260
+    TabOrder = 2
+    object StartTimeEdit: TMagicTimeEdit
+      Left = 24
+      Height = 24
+      Top = 26
+      Width = 95
+      AMPM = False
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Time = '0:00:00'
+      OnTimeChange = StartTimeEditTimeChange
+    end
+    object Label7: TLabel
+      Left = 24
+      Height = 13
+      Top = 9
+      Width = 22
+      Caption = 'Time'
+      ParentColor = False
+    end
+  end
+  object GroupBox5: TGroupBox
+    Left = 304
+    Height = 85
+    Top = 20
+    Width = 184
+    Caption = 'Lead Time for Crew Call'
+    ClientHeight = 67
+    ClientWidth = 180
+    Color = clForm
+    ParentColor = False
+    TabOrder = 3
+    object StaticText4: TStaticText
+      Left = 16
+      Height = 14
+      Top = 8
+      Width = 28
+      AutoSize = True
+      Caption = 'Hours'
+      TabOrder = 1
+    end
+    object StaticText5: TStaticText
+      Left = 72
+      Height = 14
+      Top = 8
+      Width = 37
+      AutoSize = True
+      Caption = 'Minutes'
+      TabOrder = 0
+    end
+    object CrewCallLeadTimeEdit: TMagicTimeEdit
+      Left = 16
+      Height = 24
+      Top = 26
+      Width = 148
+      AMPM = True
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Time = '0:00:00'
+      OnTimeChange = CrewCallLeadTimeEditTimeChange
+    end
+  end
+end

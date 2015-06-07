@@ -1,0 +1,76 @@
+object SecondSectionForm: TSecondSectionForm
+  Left = 245
+  Height = 321
+  Top = 122
+  Width = 269
+  Caption = 'Second Section'
+  ClientHeight = 321
+  ClientWidth = 269
+  Position = poScreenCenter
+  LCLVersion = '1.4.0.4'
+  object EngineEdit: TLabeledEdit
+    Left = 52
+    Height = 27
+    Top = 39
+    Width = 72
+    EditLabel.AnchorSideLeft.Control = EngineEdit
+    EditLabel.AnchorSideRight.Control = EngineEdit
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = EngineEdit
+    EditLabel.Left = 52
+    EditLabel.Height = 13
+    EditLabel.Top = 23
+    EditLabel.Width = 72
+    EditLabel.Caption = 'Engine Number'
+    EditLabel.ParentColor = False
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+    Text = '9999'
+    OnChange = EngineEditChange
+    OnKeyPress = EngineEditKeyPress
+  end
+  object TrainListBox: TListBox
+    Left = 56
+    Height = 208
+    Top = 96
+    Width = 69
+    ItemHeight = 0
+    OnClick = TrainListBoxClick
+    TabOrder = 1
+  end
+  object ButtonOK: TBitBtn
+    Left = 152
+    Height = 30
+    Top = 39
+    Width = 75
+    Default = True
+    DefaultCaption = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 2
+  end
+  object BitBtn2: TBitBtn
+    Left = 152
+    Height = 30
+    Top = 96
+    Width = 75
+    Cancel = True
+    DefaultCaption = True
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 3
+  end
+  object Label1: TLabel
+    Left = 56
+    Height = 13
+    Top = 80
+    Width = 24
+    Caption = 'Train'
+    ParentColor = False
+  end
+end

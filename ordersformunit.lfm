@@ -1,0 +1,167 @@
+object OrdersForm: TOrdersForm
+  Left = 301
+  Height = 419
+  Top = 96
+  Width = 573
+  Caption = 'Orders Pickup/Setout'
+  ClientHeight = 419
+  ClientWidth = 573
+  LCLVersion = '1.4.0.4'
+  object GroupBox1: TGroupBox
+    Left = 32
+    Height = 240
+    Top = 24
+    Width = 121
+    Caption = 'Train'
+    ClientHeight = 222
+    ClientWidth = 117
+    TabOrder = 0
+    object ListBoxTrains: TListBox
+      Left = 16
+      Height = 200
+      Top = 8
+      Width = 88
+      ItemHeight = 0
+      OnClick = ListBoxTrainsClick
+      TabOrder = 0
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 192
+    Height = 240
+    Top = 24
+    Width = 112
+    Caption = 'Currently Assigned'
+    ClientHeight = 222
+    ClientWidth = 108
+    TabOrder = 1
+    object LabelSalinas: TLabel
+      Left = 24
+      Height = 18
+      Top = 48
+      Width = 52
+      Caption = 'Salinas'
+      Enabled = False
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelKingCity: TLabel
+      Left = 24
+      Height = 18
+      Top = 91
+      Width = 63
+      Caption = 'King City'
+      Enabled = False
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 344
+    Height = 240
+    Top = 24
+    Width = 185
+    Caption = 'Work At'
+    ClientHeight = 222
+    ClientWidth = 181
+    TabOrder = 2
+    object ButtonNone: TBitBtn
+      Left = 24
+      Height = 30
+      Top = 16
+      Width = 75
+      Cancel = True
+      Caption = 'None'
+      Kind = bkCancel
+      ModalResult = 2
+      OnClick = WorkAtClick
+      TabOrder = 0
+    end
+    object ButtonSalinas: TBitBtn
+      Tag = 1
+      Left = 24
+      Height = 30
+      Top = 64
+      Width = 75
+      Caption = 'Salinas'
+      Kind = bkOK
+      ModalResult = 1
+      OnClick = WorkAtClick
+      TabOrder = 1
+    end
+    object ButtonKingCity: TBitBtn
+      Tag = 2
+      Left = 24
+      Height = 30
+      Top = 112
+      Width = 75
+      Caption = 'King City'
+      Default = True
+      Kind = bkOK
+      ModalResult = 1
+      OnClick = WorkAtClick
+      TabOrder = 2
+    end
+    object ButtonBoth: TBitBtn
+      Tag = 3
+      Left = 24
+      Height = 30
+      Top = 160
+      Width = 75
+      Caption = 'Both'
+      Kind = bkAll
+      ModalResult = 8
+      OnClick = WorkAtClick
+      TabOrder = 3
+    end
+  end
+  object GroupBox4: TGroupBox
+    Left = 32
+    Height = 65
+    Top = 280
+    Width = 497
+    Caption = 'Restrictions'
+    ClientHeight = 47
+    ClientWidth = 493
+    TabOrder = 3
+    object LabelKCEastbound: TLabel
+      Left = 24
+      Height = 18
+      Top = 14
+      Width = 450
+      AutoSize = False
+      Caption = 'Monarch Sugar and Freight House (leave on train for SLO Yard)'
+      ParentColor = False
+      Visible = False
+    end
+    object LabelKCWestbound: TLabel
+      Left = 24
+      Height = 18
+      Top = 14
+      Width = 450
+      AutoSize = False
+      Caption = 'Joad Feed and Implement (drop at Salinas and backship)'
+      ParentColor = False
+      Visible = False
+    end
+  end
+  object BitBtn1: TBitBtn
+    Left = 454
+    Height = 30
+    Top = 368
+    Width = 75
+    Caption = 'Dispatcher'
+    OnClick = BitBtn1Click
+    TabOrder = 4
+  end
+end

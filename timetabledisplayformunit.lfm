@@ -1,0 +1,91 @@
+object TimetableDisplayForm: TTimetableDisplayForm
+  Left = 37
+  Height = 611
+  Top = 38
+  Width = 1282
+  Caption = 'TimetableDisplayForm'
+  ClientHeight = 611
+  ClientWidth = 1282
+  Constraints.MinWidth = 900
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '1.4.0.4'
+  object BitBtn1: TBitBtn
+    Left = 1200
+    Height = 30
+    Top = 572
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Done'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = BitBtn1Click
+    TabOrder = 0
+  end
+  object BitBtn2: TBitBtn
+    Left = 1200
+    Height = 30
+    Top = 532
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Print'
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 1233
+    Height = 13
+    Top = 41
+    Width = 31
+    Anchors = [akTop, akRight]
+    Caption = 'Label1'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 1233
+    Height = 13
+    Top = 72
+    Width = 31
+    Anchors = [akTop, akRight]
+    Caption = 'Label2'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 1233
+    Height = 13
+    Top = 104
+    Width = 31
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    Caption = 'Label3'
+    ParentColor = False
+  end
+  object ScrollBox1: TScrollBox
+    Left = 0
+    Height = 608
+    Top = 0
+    Width = 1188
+    HorzScrollBar.Increment = 9
+    HorzScrollBar.Page = 90
+    HorzScrollBar.Smooth = True
+    HorzScrollBar.Tracking = True
+    VertScrollBar.Increment = 60
+    VertScrollBar.Page = 600
+    VertScrollBar.Smooth = True
+    VertScrollBar.Tracking = True
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderStyle = bsNone
+    ClientHeight = 608
+    ClientWidth = 1188
+    TabOrder = 2
+    OnResize = ScrollBox1Resize
+    object Image1: TImage
+      Left = 0
+      Height = 600
+      Top = 0
+      Width = 1166
+      Anchors = [akTop, akLeft, akRight]
+      OnPaint = Image1Paint
+    end
+  end
+end

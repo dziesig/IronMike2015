@@ -1,0 +1,14 @@
+#State          Event           NewState        NextEvent
+Start0          Starting        Start
+Start           Append          Appending
+Appending       Cancel          CancelAppend
+CancelAppend    Done            Start
+Appending       Post            Posting
+Posting         Done            Start
+Start           Edit            Editing
+Editing         Cancel          Start
+Editing         Post            Posting
+Start           Delete          Deleting
+Deleting        Done            Start
+Deleting        Cancel          Start
+

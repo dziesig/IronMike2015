@@ -1,0 +1,35 @@
+object SplashForm: TSplashForm
+  Left = 301
+  Height = 327
+  Top = 110
+  Width = 920
+  Caption = 'SplashForm'
+  ClientHeight = 327
+  ClientWidth = 920
+  LCLVersion = '1.4.0.4'
+  object StaticText1: TStaticText
+    Left = 0
+    Height = 277
+    Top = 50
+    Width = 920
+    Align = alClient
+    Alignment = taCenter
+    Caption = 'Iron Mike 2015'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -48
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 920
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 1
+  end
+end

@@ -1,0 +1,252 @@
+object PreferencesForm: TPreferencesForm
+  Left = 66
+  Height = 328
+  Top = 42
+  Width = 680
+  BorderStyle = bsDialog
+  Caption = 'Iron Mike 2015 - Preferences'
+  ClientHeight = 328
+  ClientWidth = 680
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '1.4.0.4'
+  object ClockStyleRG: TRadioGroup
+    Left = 36
+    Height = 53
+    Top = 28
+    Width = 203
+    AutoFill = True
+    Caption = 'Default Clock Style'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 35
+    ClientWidth = 199
+    Color = clForm
+    Columns = 2
+    Items.Strings = (
+      '24 Hour'
+      'AM/PM'
+    )
+    OnClick = ClockStyleRGClick
+    ParentColor = False
+    TabOrder = 0
+  end
+  object GroupBox1: TGroupBox
+    Left = 248
+    Height = 280
+    Top = 28
+    Width = 228
+    Caption = 'Default Start Date'
+    ClientHeight = 262
+    ClientWidth = 224
+    Color = clForm
+    ParentColor = False
+    TabOrder = 1
+    object Calendar1: TCalendar
+      Left = 16
+      Height = 158
+      Top = 12
+      Width = 190
+      DateTime = 42056
+      OnClick = Calendar1Click
+      TabOrder = 0
+    end
+    object ComboBox3: TComboBox
+      Left = 16
+      Height = 21
+      Top = 216
+      Width = 60
+      ItemHeight = 13
+      ItemIndex = 0
+      Items.Strings = (
+        '1840'
+        '1850'
+        '1860'
+        '1870'
+        '1880'
+        '1890'
+        '1900'
+        '1910'
+        '1920'
+        '1930'
+        '1940'
+        '1950'
+        '1960'
+        '1970'
+        '1980'
+        '1990'
+        '2000'
+        '2010'
+        '2020'
+      )
+      OnCloseUp = ComboBox3CloseUp
+      Style = csDropDownList
+      TabOrder = 1
+      Text = '1840'
+    end
+    object Label5: TLabel
+      Left = 16
+      Height = 13
+      Top = 197
+      Width = 36
+      Caption = 'Decade'
+      ParentColor = False
+    end
+  end
+  object BitBtn2: TBitBtn
+    Left = 560
+    Height = 30
+    Top = 278
+    Width = 75
+    Caption = 'Done'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 2
+  end
+  object GroupBox2: TGroupBox
+    Left = 488
+    Height = 169
+    Top = 28
+    Width = 160
+    Caption = 'Start Year Range'
+    ClientHeight = 151
+    ClientWidth = 156
+    Color = clForm
+    ParentColor = False
+    TabOrder = 3
+    object ComboBox1: TComboBox
+      Left = 20
+      Height = 21
+      Top = 24
+      Width = 76
+      ItemHeight = 13
+      Items.Strings = (
+        '1840'
+        '1850'
+        '1860'
+      )
+      OnCloseUp = ComboBox1CloseUp
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object Label2: TLabel
+      Left = 20
+      Height = 13
+      Top = 8
+      Width = 35
+      Caption = 'Earliest'
+      ParentColor = False
+    end
+    object Label3: TLabel
+      Left = 20
+      Height = 13
+      Top = 48
+      Width = 30
+      Caption = 'Latest'
+      ParentColor = False
+    end
+    object ComboBox2: TComboBox
+      Left = 20
+      Height = 21
+      Top = 64
+      Width = 76
+      ItemHeight = 13
+      Items.Strings = (
+        '1950'
+        '2000'
+        '2015'
+      )
+      OnCloseUp = ComboBox2CloseUp
+      TabOrder = 1
+    end
+    object Label4: TLabel
+      Left = 0
+      Height = 15
+      Top = 96
+      Width = 158
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      AutoSize = False
+      Caption = 'OR'
+      ParentColor = False
+    end
+    object CheckBox1: TCheckBox
+      Left = 20
+      Height = 17
+      Top = 120
+      Width = 103
+      Caption = 'Use Current Year'
+      OnClick = CheckBox1Click
+      TabOrder = 2
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 32
+    Height = 105
+    Top = 203
+    Width = 207
+    Caption = 'Speech'
+    ClientHeight = 87
+    ClientWidth = 203
+    TabOrder = 4
+    object CheckBox2: TCheckBox
+      Left = 23
+      Height = 17
+      Top = 8
+      Width = 116
+      Caption = 'Announce Crew Call'
+      OnClick = CheckBox2Click
+      TabOrder = 0
+    end
+    object CheckBox3: TCheckBox
+      Left = 23
+      Height = 17
+      Top = 32
+      Width = 104
+      Caption = 'Announce Orders'
+      OnClick = CheckBox3Click
+      TabOrder = 1
+    end
+    object CheckBox4: TCheckBox
+      Left = 23
+      Height = 17
+      Top = 56
+      Width = 120
+      Caption = 'Announce Envelopes'
+      OnClick = CheckBox4Click
+      TabOrder = 2
+    end
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 36
+    Height = 105
+    Top = 92
+    Width = 203
+    AutoFill = True
+    Caption = 'Orders Font'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 87
+    ClientWidth = 199
+    ItemIndex = 0
+    Items.Strings = (
+      'Arial'
+      'Old Typewriter'
+      'TELETYPE 1945-1985'
+    )
+    OnClick = RadioGroup1Click
+    TabOrder = 5
+  end
+end

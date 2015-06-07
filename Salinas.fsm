@@ -1,0 +1,26 @@
+#State                  Event                   NewState          NextEvent
+Start0                  Start                   Start
+Start                   ButtonIce               Icing
+Icing                   Tick                    IcingTimer
+Icing                   ButtonForce             StartSpotting
+IcingTimer              Tick                    IcingTimer
+IcingTimer              Done                    StartSpotting
+IcingTimer              ButtonForce             StartSpotting
+StartSpotting           Done                    Spotting
+Spotting                ButtonSpotted           Spotting
+Spotting                Done                    StartLoading
+StartLoading            Done                    Loading
+Loading                 Tick                    Loading
+Loading                 ButtonSpotted           LoadingBack
+LoadingBack             Tick                    Loading
+LoadingBack             Done                    StartFinalIcing
+Loading                 Done                    BackForIcing
+BackForIcing            ButtonSpotted           BackForIcing
+BackForIcing            Tick                    BackForIcing
+BackForIcing            Done                    StartFinalIcing
+StartFinalIcing         Done                    FinalIcing
+FinalIcing              Tick                    FinalIcing
+FinalIcing              Done                    ReadyToDepart
+ReadyToDepart           Tick                    ReadyToDepart
+ReadyToDepart           ButtonDepart            Start
+

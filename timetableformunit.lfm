@@ -1,0 +1,162 @@
+object TimetableForm: TTimetableForm
+  Left = 158
+  Height = 477
+  Top = 212
+  Width = 1134
+  Caption = 'TimetableForm'
+  ClientHeight = 477
+  ClientWidth = 1134
+  OnCreate = FormCreate
+  LCLVersion = '1.4.0.4'
+  object TTGrid: TMagicStringGrid
+    Left = 272
+    Height = 424
+    Top = 32
+    Width = 848
+    ColCount = 7
+    DefaultColWidth = 120
+    DefaultRowHeight = 40
+    FixedCols = 3
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -12
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goAlwaysShowEditor, goSmoothScroll]
+    ParentFont = False
+    RowCount = 5
+    ScrollBars = ssBoth
+    TabOrder = 0
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Height = -12
+    TitleFont.Name = 'Courier New'
+    TitleFont.Pitch = fpFixed
+    TitleFont.Quality = fqDraft
+    TitleFont.Style = [fsBold]
+    OnDrawCell = TTGridDrawCell
+    OnMagicSelectCell = TTGridMagicSelectCell
+  end
+  object TTStopGroupBox: TGroupBox
+    Left = 8
+    Height = 432
+    Top = 24
+    Width = 248
+    Caption = 'Train'
+    ClientHeight = 405
+    ClientWidth = 244
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -19
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 1
+    object StaticText1: TStaticText
+      Left = 0
+      Height = 25
+      Top = 16
+      Width = 216
+      Alignment = taCenter
+      Caption = 'Station'
+      TabOrder = 0
+    end
+    object ArrivalTimeEdit: TMagicTimeEdit
+      Left = 80
+      Height = 24
+      Top = 56
+      Width = 148
+      AMPM = True
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Time = '0:00:00'
+      OnTimeChange = ArrivalTimeEditTimeChange
+    end
+    object Label1: TLabel
+      Left = 16
+      Height = 18
+      Top = 60
+      Width = 49
+      Caption = 'Arrives'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 16
+      Height = 18
+      Top = 100
+      Width = 56
+      Caption = 'Departs'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object DepartureTimeEdit: TMagicTimeEdit
+      Left = 80
+      Height = 24
+      Top = 96
+      Width = 148
+      AMPM = True
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Time = '0:00:00'
+      OnTimeChange = ArrivalTimeEditTimeChange
+    end
+    object Button1: TButton
+      Left = 16
+      Height = 25
+      Top = 136
+      Width = 211
+      Caption = 'Arrival = Departure'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      OnClick = Button1Click
+      ParentFont = False
+      TabOrder = 3
+    end
+    object TracksListBox: TListBox
+      Left = 16
+      Height = 176
+      Top = 208
+      Width = 212
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Items.Strings = (
+        '<None>'
+      )
+      ItemHeight = 17
+      OnClick = TracksListBoxClick
+      ParentFont = False
+      TabOrder = 4
+    end
+    object Label3: TLabel
+      Left = 16
+      Height = 18
+      Top = 184
+      Width = 70
+      Caption = 'Use Track'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+end
